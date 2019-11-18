@@ -258,3 +258,24 @@ footer .footer-nav nav a {
 .team .member {
   width: 25%;
 }
+.team .member .fa-linkedin {
+  color: #0e76a8;
+}
+.team .member .fa-github-square {
+  color: #333333;
+}
+.team .member .fa-twitter-square {
+  color: #00acee;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 1000px;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none!important;
+  height: 500px;
+  width: 1000px;
+}
