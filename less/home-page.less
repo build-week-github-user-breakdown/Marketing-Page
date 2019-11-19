@@ -1,22 +1,33 @@
 .team {
+    padding: 60px 0;
    .flex(row, space-evenly);
   // flex-wrap: no-wrap;
 
-.member{
-    width: 25%;
+    .member {
+        margin: 25px 0;
+        .flex(column, space-evenly);
 
+        img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 50%;
+        }
 
-    .fa-linkedin{
-    color: #0e76a8;
-    }
+        h3 {
+            margin-top:10px;
+        }
     
-   .fa-github-square{
-       color: #333333;
-   }
+        .fa-linkedin{
+            color: #0e76a8;
+        }
 
-   .fa-twitter-square{
-        color: #00acee;
+        .fa-github-square{
+            color: #333333;
+        }
 
-   }
-}
+        .fa-twitter-square{
+            color: #00acee;
+        }
+    }
 }
