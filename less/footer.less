@@ -24,9 +24,25 @@ footer {
         margin: 0 auto;
         .flex(column,space-around);
 
+        @media @tablet {
+            width: 100%;
+
+        }
+
+        @media @phone{
+            width: 100%;
+
+        }
+
         nav {
             width: 30%;
             .flex(row,space-between);
+
+            @media @phone{
+                width: 80%;
+                
+
+            }
 
             a {
                 text-decoration: none;
