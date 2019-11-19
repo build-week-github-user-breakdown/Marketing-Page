@@ -1,0 +1,38 @@
+footer {
+    background-color: #eee;
+
+    .subscribe {
+        width: 100%;
+        background-color: darkgrey;
+        height: 60px;
+
+        .container {
+            .flex(column,space-around);
+            height: 100%;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            .flex(row, space-around)
+        }
+    }
+
+    .footer-nav {
+        width: 1000px;
+        height: 200px;
+        margin: 0 auto;
+        .flex(column,space-around);
+
+        nav {
+            width: 30%;
+            .flex(row,space-between);
+
+            a {
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: black;
+            }
+        }
+    }
+}
