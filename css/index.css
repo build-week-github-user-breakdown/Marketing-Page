@@ -182,6 +182,9 @@ img {
     width: 96%;
   }
 }
+section {
+  margin-top: 15px;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -229,6 +232,23 @@ img {
   align-items: center;
   flex-wrap: wrap;
 }
+.navbar .topnav .logo {
+  margin: 10px;
+}
+.navbar .topnav .fa-bookmark {
+  font-size: 5.5rem;
+  margin-right: 5px;
+}
+.navbar .topnav .logo-git {
+  font-size: 5rem;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+.navbar .topnav .logo-book {
+  font-size: 5rem;
+  font-family: 'Roboto';
+  font-weight: 800;
+}
 @media (max-width: 800px) {
   .navbar .topnav {
     width: 100%;
@@ -258,6 +278,11 @@ img {
 @media (max-width: 800px) {
   .navbar .topnav nav {
     width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 500px) {
@@ -302,11 +327,18 @@ img {
 }
 footer {
   background-color: #eee;
+  margin-top: 15px;
 }
 footer .subscribe {
   width: 100%;
   background-color: darkgrey;
   height: 60px;
+}
+@media (max-width: 500px) {
+  footer .subscribe {
+    height: 100%;
+    padding: 15px 0;
+  }
 }
 footer .subscribe .container {
   display: flex;
@@ -317,13 +349,49 @@ footer .subscribe .container {
   height: 100%;
 }
 footer .subscribe form {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  footer .subscribe form {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  footer .subscribe form {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+footer .subscribe form label {
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  footer .subscribe form label {
+    margin-bottom: 10px;
+  }
+}
+footer .subscribe form input[type=text] {
+  height: 35px;
+  width: 40%;
+}
+@media (max-width: 500px) {
+  footer .subscribe form input[type=text] {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+footer .subscribe form button {
+  padding: 5px 15px;
 }
 footer .footer-nav {
   width: 1000px;
@@ -434,8 +502,10 @@ footer .footer-nav nav a {
   margin-top: 3px;
   padding: 5px 15px;
 }
-.contact-us .send {
-  text-align: center;
+@media (max-width: 500px) {
+  .contact-us .send {
+    text-align: center;
+  }
 }
 .mapouter {
   position: relative;
