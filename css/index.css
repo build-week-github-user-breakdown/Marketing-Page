@@ -187,7 +187,7 @@ section {
   margin-top: 15px;
 }
 .row {
-  margin: 25px 0;
+  margin: 40px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -215,6 +215,7 @@ section {
   }
   .row .col-md-4 {
     width: 100%;
+    margin-bottom: 25px;
   }
   .row .col-md-4 img {
     float: left;
@@ -234,6 +235,11 @@ section {
     max-width: 300px;
     width: 100%;
   }
+  .row .col-sm-4 .col-img {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   #rev {
@@ -244,17 +250,51 @@ section {
     flex-wrap: wrap;
   }
 }
+/*
 header {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../img/people-on-laptops.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
+    width: 100%;;
+    height: 100vh;
+    background-image: url("../img/people-on-laptops.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    //background-size: contain;
+    @media @phone {
+        background-image: none;
+        height: 100%;
+    }
 }
-@media (max-width: 500px) {
-  header {
-    background-image: none;
-    height: 100%;
+*/
+.anim {
+  width: 786px;
+  height: 100px;
+  margin: 0 auto;
+}
+.anim .sq {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.anim .sq div {
+  width: 12px;
+  height: 12px;
+  background-color: #ebedf0;
+}
+.anim .sq .dg {
+  animation: dg 10s infinite;
+}
+@keyframes dg {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #196127;
+  }
+  100% {
+    background: #ebedf0;
   }
 }
 .navbar {
@@ -519,9 +559,6 @@ footer .footer-nav nav a {
   section h3 {
     margin: 15px 0 10px;
   }
-}
-section img {
-  margin-bottom: 15px;
 }
 .team {
   padding: 60px 0;
