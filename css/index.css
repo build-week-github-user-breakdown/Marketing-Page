@@ -264,39 +264,6 @@ header {
     }
 }
 */
-.anim {
-  width: 786px;
-  height: 100px;
-  margin: 0 auto;
-}
-.anim .sq {
-  margin: 2px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.anim .sq div {
-  width: 12px;
-  height: 12px;
-  background-color: #ebedf0;
-}
-.anim .sq .dg {
-  animation: dg 10s infinite;
-}
-@keyframes dg {
-  0% {
-    background: #ebedf0;
-  }
-  25% {
-    background: #ebedf0;
-  }
-  50% {
-    background: #196127;
-  }
-  100% {
-    background: #ebedf0;
-  }
-}
 .navbar {
   width: 100%;
 }
@@ -549,6 +516,124 @@ footer .footer-nav nav a {
   text-decoration: none;
   font-size: 1.8rem;
   color: black;
+}
+header {
+  text-align: center;
+  padding: 4% 0;
+}
+header h1 {
+  margin-bottom: 2%;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  header h1 {
+    margin: 30px 0;
+    font-size: 3rem;
+  }
+}
+.anim-frame {
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ebedf0;
+  margin: 0 auto;
+}
+.anim-frame .anim {
+  padding: 5px;
+  width: 796px;
+  height: 110px;
+  margin: 0 auto;
+}
+.anim-frame .anim .sq {
+  margin: 2px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.anim-frame .anim .sq div {
+  width: 12px;
+  height: 12px;
+  background-color: #ebedf0;
+}
+.anim-frame .anim .sq .bg-dg {
+  background-color: #196127;
+}
+.anim-frame .anim .sq .bg-gr {
+  background-color: #239a3b;
+}
+.anim-frame .anim .sq .bg-lg {
+  background-color: #7bc96f;
+}
+.anim-frame .anim .sq .bg-li {
+  background-color: #c6e48b;
+}
+.anim-frame .anim .sq .dg {
+  animation: dg 15s infinite;
+}
+.anim-frame .anim .sq .li {
+  animation: li 12s infinite;
+}
+.anim-frame .anim .sq .gr {
+  animation: gr 9s infinite;
+}
+.anim-frame .anim .sq .lg {
+  animation: lg 7s infinite;
+}
+@keyframes dg {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #196127;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes gr {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #239a3b;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes lg {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #7bc96f;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes li {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #c6e48b;
+  }
+  100% {
+    background: #ebedf0;
+  }
 }
 @media (max-width: 500px) {
   section h2 {
