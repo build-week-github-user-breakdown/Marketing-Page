@@ -145,23 +145,24 @@ h5 {
 }
 h1 {
   font-size: 4rem;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 h2 {
   font-size: 3.2rem;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 h4 {
-  font-size: 2.5rem;
-  padding-bottom: 10px;
+  font-size: 1.8rem;
+  margin: 10px 0 5px;
 }
 p {
   line-height: 1.5;
   font-size: 1.6rem;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 img {
   max-width: 100%;
@@ -186,6 +187,7 @@ section {
   margin-top: 15px;
 }
 .row {
+  margin: 25px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -214,10 +216,45 @@ section {
   .row .col-md-4 {
     width: 100%;
   }
+  .row .col-md-4 img {
+    float: left;
+    margin-right: 4%;
+    width: 22%;
+  }
 }
 @media (max-width: 500px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
   .row .col-sm-4 {
+    max-width: 300px;
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #rev {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/people-on-laptops.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+@media (max-width: 500px) {
+  header {
+    background-image: none;
+    height: 100%;
   }
 }
 .navbar {
@@ -233,25 +270,30 @@ section {
   flex-wrap: wrap;
 }
 .navbar .topnav .logo {
-  margin: 10px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.navbar .topnav .fa-bookmark {
-  font-size: 5.5rem;
-  margin-right: 5px;
+.navbar .topnav .logo .fa-bookmark {
+  font-size: 5rem;
+  margin-right: 8px;
 }
-.navbar .topnav .logo-git {
+.navbar .topnav .logo .logo-git {
   font-size: 5rem;
   font-family: 'Roboto';
   font-weight: 300;
 }
-.navbar .topnav .logo-book {
+.navbar .topnav .logo .logo-book {
   font-size: 5rem;
   font-family: 'Roboto';
   font-weight: 800;
 }
 @media (max-width: 800px) {
   .navbar .topnav {
-    width: 100%;
+    width: 96%;
   }
 }
 @media (max-width: 500px) {
@@ -277,12 +319,7 @@ section {
 }
 @media (max-width: 800px) {
   .navbar .topnav nav {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
@@ -309,10 +346,16 @@ section {
   }
 }
 .navbar .topnav nav a:last-child {
-  border: 1px solid black;
-  padding: 8px 20px;
-  background-color: lightgrey;
+  padding: 5px 15px;
+  border: 1px solid #003459;
+  background-color: #00171f;
+  font-size: 1.6rem;
+  color: #FFFFFF;
   border-radius: 5px;
+}
+.navbar .topnav nav a:last-child:hover {
+  background-color: #00a8e8;
+  color: #000;
 }
 @media (max-width: 500px) {
   .navbar .topnav nav a:last-child {
@@ -391,7 +434,16 @@ footer .subscribe form input[type=text] {
   }
 }
 footer .subscribe form button {
+  border: 1px solid #003459;
+  background-color: #00171f;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  border-radius: 5px;
   padding: 5px 15px;
+}
+footer .subscribe form button:hover {
+  background-color: #00a8e8;
+  color: #000;
 }
 footer .footer-nav {
   width: 1000px;
@@ -402,6 +454,28 @@ footer .footer-nav {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+footer .footer-nav .logo {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer-nav .logo .fa-bookmark {
+  font-size: 5rem;
+  margin-right: 8px;
+}
+footer .footer-nav .logo .logo-git {
+  font-size: 5rem;
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+footer .footer-nav .logo .logo-book {
+  font-size: 5rem;
+  font-family: 'Roboto';
+  font-weight: 800;
 }
 @media (max-width: 800px) {
   footer .footer-nav {
@@ -421,6 +495,11 @@ footer .footer-nav nav {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (max-width: 800px) {
+  footer .footer-nav nav {
+    width: 80%;
+  }
+}
 @media (max-width: 500px) {
   footer .footer-nav nav {
     width: 80%;
@@ -430,6 +509,19 @@ footer .footer-nav nav a {
   text-decoration: none;
   font-size: 1.8rem;
   color: black;
+}
+@media (max-width: 500px) {
+  section h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  section h3 {
+    margin: 15px 0 10px;
+  }
+}
+section img {
+  margin-bottom: 15px;
 }
 .team {
   padding: 60px 0;
@@ -483,6 +575,11 @@ footer .footer-nav nav a {
   width: 90%;
   height: 35px;
 }
+@media (max-width: 800px) {
+  .contact-us input[type=text] {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .contact-us input[type=text] {
     width: 100%;
@@ -493,6 +590,11 @@ footer .footer-nav nav a {
   display: block;
   height: 120px;
 }
+@media (max-width: 800px) {
+  .contact-us textarea {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .contact-us textarea {
     width: 100%;
@@ -501,6 +603,15 @@ footer .footer-nav nav a {
 .contact-us button {
   margin-top: 3px;
   padding: 5px 15px;
+  border: 1px solid #003459;
+  background-color: #00171f;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+.contact-us button:hover {
+  background-color: #00a8e8;
+  color: #000;
 }
 @media (max-width: 500px) {
   .contact-us .send {
@@ -510,22 +621,22 @@ footer .footer-nav nav a {
 .mapouter {
   position: relative;
   text-align: right;
-  height: 500px;
-  width: 1000px;
+  height: 400px;
+  width: 100%;
 }
 @media (max-width: 800px) {
   .mapouter {
     width: 100%;
+    height: 300px;
   }
 }
 .gmap_canvas {
   overflow: hidden;
   background: none!important;
-  height: 500px;
-  width: 1000px;
+  height: 100%;
+  width: 100%;
 }
-@media (max-width: 800px) {
-  .gmap_canvas {
-    width: 100%;
-  }
+.gmap_canvas iframe {
+  height: 100%;
+  width: 100%;
 }

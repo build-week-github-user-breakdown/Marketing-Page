@@ -1,3 +1,18 @@
+section {
+    h2 {
+        @media @phone {
+            text-align: center;
+        }
+    }
+    h3 {
+        @media @phone {
+            margin: 15px 0 10px;
+        }
+    }
+    img {
+        margin-bottom: 15px;
+    }
+}
 .team {
     padding: 60px 0;
    .flex(row, space-evenly);
@@ -51,7 +66,9 @@
     input[type=text] {
         width: 90%;
         height: 35px; 
-
+        @media @tablet {
+            width: 100%;
+        }
         @media @phone {
             width: 100%;
         }
@@ -61,17 +78,19 @@
         width: 90%;
         display: block;
         height: 120px;
-
+        @media @tablet {
+            width: 100%;
+        }
         @media @phone {
             width: 100%;
         }
     }
 
     button {
-        margin-top: 3px;
-        padding:5px 15px 
-
+        margin-top:3px;
+        .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
     }
+    
 
     .send{
         @media @phone {

@@ -5,3 +5,34 @@
     align-items: @align;
     flex-wrap: @wrap;
 }
+.btn(@color, @bg-color, @border-color, @hover-color, @hover-bg-color) {
+   padding: 5px 15px;
+   border: 1px solid @border-color;
+   background-color: @bg-color;
+   font-size: 1.6rem;
+   color: @color;
+   border-radius: 5px;
+   
+   &:hover {
+   background-color: @hover-bg-color;
+   color: @hover-color;
+   }
+}
+.logo() {
+    margin: 10px 0;
+    .flex(row,space-evenly);
+    .fa-bookmark {
+        font-size: 5rem;
+        margin-right: 8px;
+    }
+    .logo-git {
+        font-size: 5rem;
+        font-family: 'Roboto';
+        font-weight: 300;
+    }
+    .logo-book {
+        font-size: 5rem;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+}

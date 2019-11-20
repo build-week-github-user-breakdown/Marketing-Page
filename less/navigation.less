@@ -1,3 +1,15 @@
+header {
+    width: 100%;;
+    height: 100vh;
+    background-image: url("../img/people-on-laptops.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    //background-size: contain;
+    @media @phone {
+        background-image: none;
+        height: 100%;
+    }
+}
 .navbar {
     width: 100%;
     
@@ -7,25 +19,11 @@
         .flex(row,space-between);
 
         .logo {
-            margin: 10px;
-        }
-        .fa-bookmark {
-            font-size: 5.5rem;
-            margin-right: 5px;
-        }
-        .logo-git {
-            font-size: 5rem;
-            font-family: 'Roboto';
-            font-weight: 300;
-        }
-        .logo-book {
-            font-size: 5rem;
-            font-family: 'Roboto';
-            font-weight: 800;
+            .logo();
         }
 
         @media @tablet {
-            width: 100%;
+            width: 96%;
             
         }
 
@@ -36,9 +34,6 @@
            img {
                margin: 10px 0;
            }
-           
-
-            
         }
 
         nav {
@@ -46,9 +41,8 @@
             .flex(row,space-between);
             
             @media @tablet {
-                width: 75%;
-                .flex(row,space-between);
-
+                width: 100%;
+                
             }
 
             @media @phone {
@@ -71,10 +65,7 @@
             }
     
             a:last-child {
-                border: 1px solid black;
-                padding: 8px 20px;
-                background-color: lightgrey;
-                border-radius: 5px;
+                .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
                 
                 @media @phone {
                     border-radius: 0px;

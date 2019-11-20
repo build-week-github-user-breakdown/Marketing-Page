@@ -44,6 +44,7 @@ footer {
                 }
             }
             button {
+                .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
                 padding: 5px 15px;
             }
         }
@@ -54,10 +55,12 @@ footer {
         height: 200px;
         margin: 0 auto;
         .flex(column,space-around);
+        .logo {
+            .logo();
+        }
 
         @media @tablet {
             width: 100%;
-
         }
 
         @media @phone{
@@ -69,10 +72,11 @@ footer {
             width: 30%;
             .flex(row,space-between);
 
+            @media @tablet {
+                width: 80%;
+            }
             @media @phone{
                 width: 80%;
-                
-
             }
 
             a {
