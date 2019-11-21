@@ -197,6 +197,9 @@ section {
 .row .col-lg-1 {
   width: 22%;
 }
+.row .col-lg-1 h3 {
+  margin-top: 15px;
+}
 .row .col-lg-2 {
   width: 48%;
 }
