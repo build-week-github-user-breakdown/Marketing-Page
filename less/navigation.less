@@ -1,26 +1,84 @@
-.navbar {
-    width: 1000px;
-    margin: 0 auto;
-    .flex(row,space-between);
+/*
+header {
+    width: 100%;;
+    height: 100vh;
+    background-image: url("../img/people-on-laptops.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    //background-size: contain;
+    @media @phone {
+        background-image: none;
+        height: 100%;
+    }
+}
+*/
 
-    nav {
-        width: 60%;
+.navbar {
+    width: 100%;
+    
+    .topnav {
+        width: 1000px;
+        margin:0 auto;
         .flex(row,space-between);
 
-        a {
-            font-size: 2rem;
-            text-decoration: none;
-            color: black;
+        .logo {
+            .logo();
         }
 
-        a:last-child {
-            border: 1px solid black;
-            padding: 8px 20px;
-            background-color: lightgrey;
-            border-radius: 5px;
+        @media @tablet {
+            width: 96%;
+            
+        }
 
-            i {
-                margin-right: 5px;
+        @media @phone{
+            width: 100%;
+           .flex(column, space-around);
+          
+           img {
+               margin: 10px 0;
+           }
+        }
+
+        nav {
+            width: 60%;
+            .flex(row,space-between);
+            
+            @media @tablet {
+                width: 100%;
+                
+            }
+
+            @media @phone {
+                width: 100%;
+                .flex(column, space-evenly);
+                text-align: center;
+            }
+
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: black;
+
+                @media @phone{
+                    padding: 10px 0;
+                    width: 100%;
+                    border-top: 1px solid black;
+                    
+                }
+            }
+    
+            a:last-child {
+                .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
+                
+                @media @phone {
+                    border-radius: 0px;
+                    border-left: none;
+                    border-right: none;
+                    padding: 10px 0;
+                }
+                i {
+                    margin-right: 5px;
+                }
             }
         }
     }

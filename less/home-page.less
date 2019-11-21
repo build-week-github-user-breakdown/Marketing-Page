@@ -1,22 +1,185 @@
+header {
+    text-align: center;
+    padding:4% 0;
+    h1 {
+        margin-bottom: 2%;
+        font-weight: 700;
+
+        @media @phone {
+            margin: 30px 0;
+            font-size: 3rem;
+        }
+    }
+}
+.anim-frame {
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid @grey;
+    margin:0 auto;
+
+    .anim { 
+        padding:5px;
+        width: 796px;
+        height: 110px;
+        margin:0 auto;
+        .sq {
+            margin: 2px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+    
+            div {
+                width: 12px;
+                height: 12px;
+                background-color: #ebedf0;
+            }
+            .bg-dg{
+                background-color: @dark-green;
+            }
+            .bg-gr{
+                background-color: @green;
+            }
+            .bg-lg {
+                background-color: @light-green;
+            }
+            .bg-li {
+                background-color: @lime;
+            }
+            .dg {
+                animation: dg 15s infinite;
+            }
+            .li {
+                animation: li 12s infinite;
+            }
+            .gr {
+                animation: gr 9s infinite;
+            }
+            .lg {
+                animation: lg 7s infinite;
+            }
+            @keyframes dg {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                50%  {background:@dark-green;}
+                100%  {background:@grey;}
+            }
+            @keyframes gr {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                50%  {background:@green;}
+                100%  {background:@grey;}
+            }
+            @keyframes lg {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                50%  {background:@light-green;}
+                100%  {background:@grey;}
+            }
+            @keyframes li {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                50%  {background:@lime;}
+                100%  {background:@grey;}
+            }
+        }
+    }
+}
+section {
+    h2 {
+        @media @phone {
+            text-align: center;
+        }
+    }
+    h3 {
+        @media @phone {
+            margin: 15px 0 10px;
+        }
+    }
+}
 .team {
+    padding: 60px 0;
    .flex(row, space-evenly);
   // flex-wrap: no-wrap;
 
-.member{
-    width: 25%;
+    .member {
+        margin: 25px 0;
+        .flex(column, space-evenly);
 
+        img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+        }
 
-    .fa-linkedin{
-    color: #0e76a8;
+        h3 {
+            margin-top:15px;
+            font-weight: bold;
+        }
+        
+        i {
+            font-size: 2.5rem;
+        }
+        .fa-linkedin{
+            color: #0e76a8;
+        }
+
+        .fa-github-square{
+            color: #333333;
+        }
+
+        .fa-twitter-square{
+            color: #00acee;
+        }
+    }
+}
+
+.contact-us {
+
+    label {
+        font-size: 1.5rem; 
+        display: block;
+        margin: 10px 0 3px;
+
+        @media @phone {
+            text-align: center;
+        }
+    }
+
+    input[type=text] {
+        width: 90%;
+        height: 35px; 
+        @media @tablet {
+            width: 100%;
+        }
+        @media @phone {
+            width: 100%;
+        }
+    }
+
+    textarea {
+        width: 90%;
+        display: block;
+        height: 120px;
+        @media @tablet {
+            width: 100%;
+        }
+        @media @phone {
+            width: 100%;
+        }
+    }
+
+    button {
+        margin-top:3px;
+        .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
     }
     
-   .fa-github-square{
-       color: #333333;
-   }
 
-   .fa-twitter-square{
-        color: #00acee;
-
-   }
-}
+    .send{
+        @media @phone {
+            text-align: center;
+        }
+        
+    }
 }
