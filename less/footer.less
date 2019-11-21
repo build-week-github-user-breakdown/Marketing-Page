@@ -1,59 +1,13 @@
 footer {
     background-color: #eee;
     margin-top: 15px;
-
-    .subscribe {
-        width: 100%;
-        background-color: darkgrey;
-        height: 60px;
-        @media @phone{
-            height: 100%;
-            padding: 15px 0;
-        }
-        
-
-        .container {
-            .flex(column,space-around);
-            height: 100%;
-        }
-
-        form {
-            width: 70%;
-            margin: 0 auto;
-            .flex(row, space-around);
-            @media @tablet {
-                width: 100%;
-            }
-    
-            @media @phone{
-                width: 96%;
-                .flex(column, space-around);
-            }
-            label {
-                font-size: 1.8rem;
-                @media @phone{
-                    margin-bottom: 10px;
-                }
-            }
-            input[type=text] {
-                height: 35px;
-                width: 40%;
-                @media @phone{
-                    margin-bottom: 10px;
-                    width: 100%;
-                }
-            }
-            button {
-                .btn(@white, @darker-blue, @dark-blue, @black, @light-blue);
-                padding: 5px 15px;
-            }
-        }
-    }
+    border-top: 15px solid darkgrey;
 
     .footer-nav {
         width: 1000px;
         height: 200px;
         margin: 0 auto;
+
         .flex(column,space-around);
         .logo {
             .logo();
