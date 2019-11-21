@@ -253,22 +253,142 @@ section {
     flex-wrap: wrap;
   }
 }
-/*
 header {
-    width: 100%;;
-    height: 100vh;
-    background-image: url("../img/people-on-laptops.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    //background-size: contain;
-    @media @phone {
-        background-image: none;
-        height: 100%;
-    }
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
-*/
+@media (max-width: 500px) {
+  header {
+    position: static;
+  }
+}
+header h1 {
+  position: absolute;
+  top: 40%;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  header h1 {
+    display: none;
+  }
+}
+.anim-frame {
+  max-width: 1512px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .anim-frame {
+    display: none;
+  }
+}
+.anim-frame .anim {
+  width: 1512px;
+  height: auto;
+  margin: 0 auto;
+}
+.anim-frame .anim .sq {
+  display: flex;
+  flex-direction: row;
+}
+.anim-frame .anim .sq div {
+  margin: 1px;
+  width: 16px;
+  height: 16px;
+  background-color: #ebedf0;
+}
+.anim-frame .anim .sq .dg6 {
+  animation: dg 9s infinite;
+}
+.anim-frame .anim .sq .lg6 {
+  animation: lg 5s infinite;
+}
+.anim-frame .anim .sq .gr6 {
+  animation: gr 6s infinite;
+}
+.anim-frame .anim .sq .li6 {
+  animation: li 7s infinite;
+}
+.anim-frame .anim .sq .dg8 {
+  animation: dg 8s infinite;
+}
+.anim-frame .anim .sq .gr8 {
+  animation: gr 9s infinite;
+}
+.anim-frame .anim .sq .lg8 {
+  animation: lg 8s infinite;
+}
+@keyframes dg {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  80% {
+    background: #196127;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes gr {
+  0% {
+    background: #239a3b;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #ebedf0;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes lg {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #7bc96f;
+  }
+  50% {
+    background: #ebedf0;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
+@keyframes li {
+  0% {
+    background: #ebedf0;
+  }
+  25% {
+    background: #ebedf0;
+  }
+  50% {
+    background: #c6e48b;
+  }
+  100% {
+    background: #ebedf0;
+  }
+}
 .navbar {
   width: 100%;
+  position: absolute;
+  top: 3%;
+}
+@media (max-width: 500px) {
+  .navbar {
+    position: static;
+  }
 }
 .navbar .topnav {
   width: 1000px;
@@ -520,123 +640,13 @@ footer .footer-nav nav a {
   font-size: 1.8rem;
   color: black;
 }
-header {
-  text-align: center;
-  padding: 4% 0;
-}
-header h1 {
-  margin-bottom: 2%;
-  font-weight: 700;
-}
-@media (max-width: 500px) {
-  header h1 {
-    margin: 30px 0;
-    font-size: 3rem;
-  }
-}
-.anim-frame {
-  max-width: 800px;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid #ebedf0;
-  margin: 0 auto;
-}
-.anim-frame .anim {
-  padding: 5px;
-  width: 796px;
-  height: 110px;
-  margin: 0 auto;
-}
-.anim-frame .anim .sq {
-  margin: 2px 0;
+section .frame {
+  height: 214px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.anim-frame .anim .sq div {
-  width: 12px;
-  height: 12px;
-  background-color: #ebedf0;
-}
-.anim-frame .anim .sq .bg-dg {
-  background-color: #196127;
-}
-.anim-frame .anim .sq .bg-gr {
-  background-color: #239a3b;
-}
-.anim-frame .anim .sq .bg-lg {
-  background-color: #7bc96f;
-}
-.anim-frame .anim .sq .bg-li {
-  background-color: #c6e48b;
-}
-.anim-frame .anim .sq .dg {
-  animation: dg 15s infinite;
-}
-.anim-frame .anim .sq .li {
-  animation: li 12s infinite;
-}
-.anim-frame .anim .sq .gr {
-  animation: gr 9s infinite;
-}
-.anim-frame .anim .sq .lg {
-  animation: lg 7s infinite;
-}
-@keyframes dg {
-  0% {
-    background: #ebedf0;
-  }
-  25% {
-    background: #ebedf0;
-  }
-  50% {
-    background: #196127;
-  }
-  100% {
-    background: #ebedf0;
-  }
-}
-@keyframes gr {
-  0% {
-    background: #239a3b;
-  }
-  25% {
-    background: #ebedf0;
-  }
-  50% {
-    background: #ebedf0;
-  }
-  100% {
-    background: #ebedf0;
-  }
-}
-@keyframes lg {
-  0% {
-    background: #ebedf0;
-  }
-  25% {
-    background: #7bc96f;
-  }
-  50% {
-    background: #ebedf0;
-  }
-  100% {
-    background: #ebedf0;
-  }
-}
-@keyframes li {
-  0% {
-    background: #ebedf0;
-  }
-  25% {
-    background: #ebedf0;
-  }
-  50% {
-    background: #c6e48b;
-  }
-  100% {
-    background: #ebedf0;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 500px) {
   section h2 {

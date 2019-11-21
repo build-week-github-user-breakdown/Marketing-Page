@@ -1,20 +1,100 @@
-/*
 header {
-    width: 100%;;
-    height: 100vh;
-    background-image: url("../img/people-on-laptops.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    //background-size: contain;
+    text-align: center;
+    //padding:4% 0;
+    position: relative;
     @media @phone {
-        background-image: none;
-        height: 100%;
+        position: static;
+    }
+    .flex(column,space-around);
+    h1 {
+        position: absolute;
+        top: 40%;
+        font-weight: 700;
+
+        @media @phone {
+            display: none;
+        }
     }
 }
-*/
+.anim-frame {
+    max-width: 1512px;
+    width: 100%;
+    overflow: hidden;
+    margin:0 auto;
+    @media @phone {
+        display: none;
+    }
+
+    .anim { 
+        width: 1512px;
+        height: auto;
+        margin:0 auto;
+        .sq {
+            display: flex;
+            flex-direction: row;
+    
+            div {
+                margin: 1px;
+                width: 16px;
+                height: 16px;
+                background-color: #ebedf0;
+            }
+            .dg6 {
+                animation: dg 9s infinite;
+            }
+            .lg6 {
+                animation: lg 5s infinite;
+            }
+            .gr6 {
+                animation: gr 6s infinite;
+            }
+            .li6 {
+                animation: li 7s infinite;
+            }
+            .dg8 {
+                animation: dg 8s infinite;
+            }
+            .gr8 {
+                animation: gr 9s infinite;
+            }
+            .lg8 {
+                animation: lg 8s infinite;
+            }
+            @keyframes dg {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                80%  {background:@dark-green;}
+                100%  {background:@grey;}
+            }
+            @keyframes gr {
+                0%   {background:@green;}
+                25%  {background:@grey;}
+                50%  {background:@grey;}
+                100%  {background:@grey;}
+            }
+            @keyframes lg {
+                0%   {background:@grey;}
+                25%  {background:@light-green;}
+                50%  {background:@grey;}
+                100%  {background:@grey;}
+            }
+            @keyframes li {
+                0%   {background:@grey;}
+                25%  {background:@grey;}
+                50%  {background:@lime;}
+                100%  {background:@grey;}
+            }
+        }
+    }
+}
 
 .navbar {
     width: 100%;
+    position: absolute;
+    top: 3%;
+    @media @phone {
+        position: static;
+    }
     
     .topnav {
         width: 1000px;
