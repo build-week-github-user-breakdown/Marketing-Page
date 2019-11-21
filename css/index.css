@@ -598,13 +598,13 @@ header h1 {
 }
 @keyframes gr {
   0% {
-    background: #ebedf0;
+    background: #239a3b;
   }
   25% {
     background: #ebedf0;
   }
   50% {
-    background: #239a3b;
+    background: #ebedf0;
   }
   100% {
     background: #ebedf0;
@@ -615,10 +615,10 @@ header h1 {
     background: #ebedf0;
   }
   25% {
-    background: #ebedf0;
+    background: #7bc96f;
   }
   50% {
-    background: #7bc96f;
+    background: #ebedf0;
   }
   100% {
     background: #ebedf0;
