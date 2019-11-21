@@ -642,9 +642,11 @@ footer .footer-nav nav a {
 }
 section .frame {
   height: 214px;
-}
-section .frame img {
-  vertical-align: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 500px) {
   section h2 {
