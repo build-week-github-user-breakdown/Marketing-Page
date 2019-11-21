@@ -1,91 +1,10 @@
-header {
-    text-align: center;
-    padding:4% 0;
-    h1 {
-        margin-bottom: 2%;
-        font-weight: 700;
-
-        @media @phone {
-            margin: 30px 0;
-            font-size: 3rem;
-        }
-    }
-}
-.anim-frame {
-    max-width: 800px;
-    width: 100%;
-    overflow: hidden;
-    border: 1px solid @grey;
-    margin:0 auto;
-
-    .anim { 
-        padding:5px;
-        width: 796px;
-        height: 110px;
-        margin:0 auto;
-        .sq {
-            margin: 2px 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-    
-            div {
-                width: 12px;
-                height: 12px;
-                background-color: #ebedf0;
-            }
-            .bg-dg{
-                background-color: @dark-green;
-            }
-            .bg-gr{
-                background-color: @green;
-            }
-            .bg-lg {
-                background-color: @light-green;
-            }
-            .bg-li {
-                background-color: @lime;
-            }
-            .dg {
-                animation: dg 15s infinite;
-            }
-            .li {
-                animation: li 12s infinite;
-            }
-            .gr {
-                animation: gr 9s infinite;
-            }
-            .lg {
-                animation: lg 7s infinite;
-            }
-            @keyframes dg {
-                0%   {background:@grey;}
-                25%  {background:@grey;}
-                50%  {background:@dark-green;}
-                100%  {background:@grey;}
-            }
-            @keyframes gr {
-                0%   {background:@green;}
-                25%  {background:@grey;}
-                50%  {background:@grey;}
-                100%  {background:@grey;}
-            }
-            @keyframes lg {
-                0%   {background:@grey;}
-                25%  {background:@light-green;}
-                50%  {background:@grey;}
-                100%  {background:@grey;}
-            }
-            @keyframes li {
-                0%   {background:@grey;}
-                25%  {background:@grey;}
-                50%  {background:@lime;}
-                100%  {background:@grey;}
-            }
-        }
-    }
-}
 section {
+    .frame {
+        height: 214px;
+        img {
+            vertical-align: bottom;
+        }
+    }
     h2 {
         @media @phone {
             text-align: center;
