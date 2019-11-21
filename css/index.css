@@ -677,6 +677,11 @@ header h1 {
 .team .member i {
   font-size: 2.5rem;
 }
+@media (max-width: 500px) {
+  .team .member i {
+    font-size: 4.5rem;
+  }
+}
 .team .member .fa-linkedin {
   color: #0e76a8;
 }
